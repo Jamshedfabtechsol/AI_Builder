@@ -55,4 +55,5 @@ ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["python", "main_fastapi.py"]
+CMD ["uvicorn", "main_fastapi:app", "--host", "0.0.0.0", "--port", "80"]
+
