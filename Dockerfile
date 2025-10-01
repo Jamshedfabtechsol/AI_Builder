@@ -47,7 +47,7 @@ RUN useradd --create-home --shell /bin/bash app && \
 USER app
 
 # Expose port
-EXPOSE 80
+EXPOSE 8080
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
@@ -58,5 +58,5 @@ ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["uvicorn", "main_fastapi:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main_fastapi:app", "--host", "0.0.0.0", "--port", "8080"]
 
