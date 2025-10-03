@@ -115,7 +115,7 @@ async def root():
         }
     }
 
-@app.post("/manager_endpoint")
+@app.post("/manager")
 async def manager_endpoint(request: ManagerRequest):
     """Manager Agent - Routes user requests to appropriate tasks"""
     try:
